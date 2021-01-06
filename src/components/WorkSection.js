@@ -55,7 +55,7 @@ export default function WorkSection() {
         </button>
       )}
       {isEditing ? <WorkForm addWork={addWork} /> : null}{' '}
-      <WorkInfo works={works} removeWork={removeWork} />
+      <WorkInfo works={works} removeWork={removeWork} isEditing={isEditing} />
     </div>
   );
 }
