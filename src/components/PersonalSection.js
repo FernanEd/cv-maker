@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PersonalForm from './Personal/PersonalForm';
 import PersonalInfo from './Personal/PersonalInfo';
+import { BsPencil, BsX } from 'react-icons/bs';
 
 export default function PersonalSection() {
   const [isEditing, setEditing] = useState(false);
@@ -41,9 +42,22 @@ export default function PersonalSection() {
 
   return (
     <div id="personal-section">
-      <button onClick={toggleEditing} class="btn btn-icon btn-edit">
-        {isEditing ? 'Close' : 'Edit'}
-      </button>
+      {isEditing ? (
+        <button
+          onClick={toggleEditing}
+          class="btn btn-icon btn-primary btn-circle btn-fixed"
+        >
+          <BsX />
+        </button>
+      ) : (
+        <button
+          onClick={toggleEditing}
+          class="btn btn-icon btn-primary btn-circle btn-fixed"
+        >
+          <BsPencil />
+        </button>
+      )}
+
       {display}
     </div>
   );

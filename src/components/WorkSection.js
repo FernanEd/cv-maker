@@ -1,16 +1,22 @@
-import { Button, Container } from '@material-ui/core';
 import React, { useState } from 'react';
 import WorkForm from './Work/WorkForm';
 import WorkInfo from './Work/WorkInfo';
+import { BsPencil, BsX } from 'react-icons/bs';
 
 export default function WorkSection() {
   const [isEditing, setEditing] = useState(false);
   const [works, updateWorks] = useState([
     {
-      company: 'test company',
-      entry: '2010',
-      ending: '2015',
-      role: 'ceo of test',
+      company: 'Vallen Proveedora',
+      entry: '2020',
+      ending: '2035',
+      role: 'Programador principal',
+    },
+    {
+      company: 'Vallen Proveedora',
+      entry: '2020',
+      ending: '2035',
+      role: 'Programador principal',
     },
   ]);
 
@@ -31,8 +37,23 @@ export default function WorkSection() {
   };
 
   return (
-    <div>
-      <button onClick={toggleEditing}>{isEditing ? 'Close' : 'Edit'}</button>
+    <div id="work-section">
+      <h2 className="section-title">Work experience</h2>
+      {isEditing ? (
+        <button
+          onClick={toggleEditing}
+          class="btn btn-icon btn-primary btn-circle btn-fixed"
+        >
+          <BsX />
+        </button>
+      ) : (
+        <button
+          onClick={toggleEditing}
+          class="btn btn-icon btn-primary btn-circle btn-fixed"
+        >
+          <BsPencil />
+        </button>
+      )}
       {isEditing ? <WorkForm addWork={addWork} /> : null}{' '}
       <WorkInfo works={works} removeWork={removeWork} />
     </div>

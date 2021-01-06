@@ -1,35 +1,28 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from '@material-ui/core';
 import React, { useState } from 'react';
+import { BsTrash } from 'react-icons/bs';
 
 export default function WorkInfo({ works, removeWork }) {
   return (
-    <div>
-      <div>
-        {works.map((work, index) => (
-          <Box key={index} display="flex">
-            <Typography variant="h4" component="h4">
-              {work.role}
-            </Typography>
-            <Typography component="p">{work.company}</Typography>
-            <Typography component="p">{work.entry} </Typography>
-            <Typography component="p">{work.ending}</Typography>
-            <Button
+    <div className="timeline-wrapper">
+      {works.map((work, index) => (
+        <div key={index} className="timeline-item">
+          <div className="timeline-item-date">
+            {work.entry} - {work.ending}
+          </div>
+          <div className="timeline-item-body">
+            <div className="timeline-title">{work.role}</div>
+            <div className="timeline-subtitle">{work.company}</div>
+          </div>
+          <div className="timeline-item-controls">
+            <button
+              className="btn btn-icon btn-secondary"
               onClick={() => removeWork(index)}
-              variant="contained"
-              color="secondary"
             >
-              Delete
-            </Button>
-          </Box>
-        ))}
-      </div>
+              <BsTrash />
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
