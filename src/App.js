@@ -5,11 +5,16 @@ import WorkSection from './components/WorkSection';
 
 function App() {
   return (
-    <div id="content">
-      <PersonalSection />
-      <EducationSection />
-      <WorkSection />
-    </div>
+    <>
+      <div id="content">
+        <PersonalSection />
+        <EducationSection />
+        <WorkSection />
+      </div>
+      <button onClick={window.print} id="print-btn" className="btn btn-primary">
+        Print
+      </button>
+    </>
   );
 }
 

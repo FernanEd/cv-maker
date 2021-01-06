@@ -215,6 +215,12 @@ a:hover {
   font-size: 1em;
 }
 
+#print-btn {
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
 @media (max-width: 678px) {
   #content {
     width: 100%;
@@ -252,5 +258,9 @@ a:hover {
     padding: 0;
     border-radius: 0;
     box-shadow: 0 0 0 0;
+  }
+
+  #print-btn {
+    display: none;
   }
 }
