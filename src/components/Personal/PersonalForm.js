@@ -1,6 +1,7 @@
+import { TextField } from '@material-ui/core';
 import React, { useState } from 'react';
 
-function PersonalForm({
+export default function PersonalForm({
   name,
   role,
   email,
@@ -13,26 +14,47 @@ function PersonalForm({
   updateAbout,
 }) {
   return (
-    <form>
-      <input value={name} onChange={updateName} placeholder="Enter your name" />
-      <input value={role} onChange={updateRole} placeholder="Enter your role" />
-      <input
+    <form className="form">
+      <TextField
+        value={name}
+        onChange={updateName}
+        label="Full name"
+        variant="outlined"
+        required
+      />
+
+      <TextField
+        value={role}
+        onChange={updateRole}
+        label="Current role"
+        variant="outlined"
+        required
+      />
+
+      <TextField
         value={email}
         onChange={updateEmail}
-        placeholder="Enter your email"
+        label="Email"
+        variant="outlined"
+        required
       />
-      <input
+
+      <TextField
         value={phoneNumber}
         onChange={updatePhoneNumber}
-        placeholder="Enter your phone number"
+        label="Phone number"
+        variant="outlined"
+        required
       />
-      <textarea
+
+      <TextField
         value={about}
         onChange={updateAbout}
-        placeholder="Write about you"
+        label="About you"
+        variant="outlined"
+        multiline
+        required
       />
     </form>
   );
 }
-
-export default PersonalForm;

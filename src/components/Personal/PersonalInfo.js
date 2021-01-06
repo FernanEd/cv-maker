@@ -1,15 +1,29 @@
+import { Card, CardContent, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 
-function PersonalInfo({ name, role, email, phoneNumber, about }) {
+export default function PersonalInfo({
+  name,
+  role,
+  email,
+  phoneNumber,
+  about,
+}) {
   return (
-    <div>
-      <div>{name || 'Name'}</div>
-      <div>{role || 'Your current role'}</div>
-      <div>{email || 'email@example.com'}</div>
-      <div>{phoneNumber || '(123)-456-789'}</div>
-      <div>{about || 'About me.'}</div>
-    </div>
+    <Card>
+      <CardContent>
+        <Typography variant="h2" component="h2">
+          {name || 'Name'}
+        </Typography>
+        <Typography variant="h4" component="h4">
+          {role || 'Your current role'}
+        </Typography>
+        <Typography component="p">{email || 'email@example.com'}</Typography>
+        <Typography component="p">{phoneNumber || '(123)-456-789'}</Typography>
+        <Typography variant="h4" component="h4">
+          About me
+        </Typography>
+        <Typography>{about || 'Brief description about yourself.'}</Typography>
+      </CardContent>
+    </Card>
   );
 }
-
-export default PersonalInfo;

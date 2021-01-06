@@ -2,40 +2,23 @@ import React, { useState } from 'react';
 import PersonalForm from './Personal/PersonalForm';
 import PersonalInfo from './Personal/PersonalInfo';
 
-function PersonalSection() {
+export default function PersonalSection() {
   const [isEditing, setEditing] = useState(false);
+  const toggleEditing = () => setEditing(!isEditing);
+
   const [name, setName] = useState();
   const [role, setRole] = useState();
   const [email, setEmail] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [about, setAbout] = useState();
 
-  const toggleEditing = () => {
-    setEditing(!isEditing);
-  };
-
-  const updateName = (e) => {
-    setName(e.target.value);
-  };
-
-  const updateRole = (e) => {
-    setRole(e.target.value);
-  };
-
-  const updateEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const updatePhoneNumber = (e) => {
-    setPhoneNumber(e.target.value);
-  };
-
-  const updateAbout = (e) => {
-    setAbout(e.target.value);
-  };
+  const updateName = (e) => setName(e.target.value);
+  const updateRole = (e) => setRole(e.target.value);
+  const updateEmail = (e) => setEmail(e.target.value);
+  const updatePhoneNumber = (e) => setPhoneNumber(e.target.value);
+  const updateAbout = (e) => setAbout(e.target.value);
 
   let display;
-
   if (isEditing)
     display = (
       <PersonalForm
@@ -57,10 +40,11 @@ function PersonalSection() {
     display = <PersonalInfo {...{ name, role, email, phoneNumber, about }} />;
 
   return (
-    <div>
-      <button onClick={toggleEditing}>Edit</button> {display}
+    <div id="personal-section">
+      <button onClick={toggleEditing} class="btn btn-icon btn-edit">
+        {isEditing ? 'Close' : 'Edit'}
+      </button>
+      {display}
     </div>
   );
 }
-
-export default PersonalSection;

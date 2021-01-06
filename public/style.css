@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+/* Default primary color - #93c */
+/*
+  blue #24c
+  purple #639
+  red #b24
+  green #284
+  pink #b59
+  orange #c61
+  golden #b83
+  black #223;
+*/
+
+:root {
+  --primary: #639;
+  --secondary: #6c757d;
+  --dark: #343a40;
+  --light: #f8f9fa;
+  --link: #17a2b8;
+
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+}
+
+body {
+  margin: 0;
+  background-color: var(--light);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+#content {
+  background-color: var(--light);
+
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+  border-radius: 2em;
+
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+#personal-section,
+#education-section,
+#work-section {
+  padding: 0.5em;
+}
+
+.personal-section {
+}
+.education-section {
+}
+.work-section {
+}
+
+.form {
+  gap: 2em;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em;
+}

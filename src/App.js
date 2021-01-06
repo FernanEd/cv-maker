@@ -6,14 +6,10 @@ import WorkSection from './components/WorkSection';
 
 function App() {
   return (
-    <div>
+    <div id="contents">
       <PersonalSection />
-      <hr />
       <EducationSection />
-      <hr />
       <WorkSection />
-      <hr />
-      <Copyright />
     </div>
   );
 }
