@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/cv-maker/static/js/main.c095ce06.chunk.js",
+    "main.js.map": "/cv-maker/static/js/main.c095ce06.chunk.js.map",
+    "runtime-main.js": "/cv-maker/static/js/runtime-main.36517885.js",
+    "runtime-main.js.map": "/cv-maker/static/js/runtime-main.36517885.js.map",
+    "static/js/2.a95d5038.chunk.js": "/cv-maker/static/js/2.a95d5038.chunk.js",
+    "static/js/2.a95d5038.chunk.js.map": "/cv-maker/static/js/2.a95d5038.chunk.js.map",
+    "index.html": "/cv-maker/index.html",
+    "static/js/2.a95d5038.chunk.js.LICENSE.txt": "/cv-maker/static/js/2.a95d5038.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36517885.js",
+    "static/js/2.a95d5038.chunk.js",
+    "static/js/main.c095ce06.chunk.js"
+  ]
+}
