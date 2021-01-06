@@ -1,5 +1,6 @@
 import { Button, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
+import { BsPlus } from 'react-icons/bs';
 
 export default function EducationForm({ addSchool }) {
   let [institution, setInstitution] = useState();
@@ -9,6 +10,7 @@ export default function EducationForm({ addSchool }) {
 
   return (
     <form
+      className="inline-form"
       autoComplete="off"
       onSubmit={(e) => {
         e.preventDefault();
@@ -16,39 +18,41 @@ export default function EducationForm({ addSchool }) {
         addSchool({ institution, entry, ending, acreditation });
       }}
     >
-      <Button type="submit" variant="contained" color="primary">
-        Add Entry
-      </Button>
+      <button type="submit" className="btn btn-circle btn-icon btn-primary">
+        <BsPlus />
+      </button>
 
-      <TextField
-        onChange={(e) => setInstitution(e.target.value)}
-        label="Institution"
-        variant="outlined"
-        required
-      />
+      <div>
+        <TextField
+          onChange={(e) => setAcreditation(e.target.value)}
+          label="Acreditation"
+          variant="outlined"
+          required
+        />
 
-      <TextField
-        onChange={(e) => setEntry(e.target.value)}
-        type="number"
-        label="Year of Entry"
-        variant="outlined"
-        required
-      />
+        <TextField
+          onChange={(e) => setInstitution(e.target.value)}
+          label="Institution"
+          variant="outlined"
+          required
+        />
 
-      <TextField
-        onChange={(e) => setEnding(e.target.value)}
-        type="number"
-        label="Year of end"
-        variant="outlined"
-        required
-      />
+        <TextField
+          onChange={(e) => setEntry(e.target.value)}
+          type="number"
+          label="Year of Entry"
+          variant="outlined"
+          required
+        />
 
-      <TextField
-        onChange={(e) => setAcreditation(e.target.value)}
-        label="Acreditation"
-        variant="outlined"
-        required
-      />
+        <TextField
+          onChange={(e) => setEnding(e.target.value)}
+          type="number"
+          label="Year of end"
+          variant="outlined"
+          required
+        />
+      </div>
     </form>
   );
 }

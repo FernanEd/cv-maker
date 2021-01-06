@@ -13,7 +13,7 @@ export default function PersonalInfo({
       <h2>{role || 'Your current role'}</h2>
       <p>{email || 'email@example.com'}</p>
       <p>{phoneNumber || '(123)-456-789'}</p>
-      <h2 className="section-title">About you</h2>
+      <h2 className="section-title">About me</h2>
       <p>{about || 'Brief description about yourself.'}</p>
     </div>
   );

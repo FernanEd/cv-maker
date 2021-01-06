@@ -78,7 +78,7 @@ a:hover {
   width: 80%;
   margin: auto;
 
-  padding: 1em;
+  padding: 2em;
   border-radius: 1.5em;
 
   background-color: var(--light);
@@ -171,15 +171,11 @@ a:hover {
 .work-section {
 }
 
-.form {
-  gap: 2em;
-}
-
-.form-div {
+.inline-form {
+  margin-bottom: 2em;
   display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  margin: 1em;
+  align-items: center;
+  gap: 1em;
 }
 
 .timeline-wrapper {
@@ -229,5 +225,32 @@ a:hover {
   }
   .timeline-title {
     font-size: 1em;
+  }
+
+  #credits {
+    display: none;
+  }
+}
+
+@media print {
+  #content {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0 0 0 0;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  #credits {
+    display: none;
+  }
+
+  .timeline-item {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 0 0 0 0;
   }
 }

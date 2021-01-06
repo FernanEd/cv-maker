@@ -7,20 +7,7 @@ export default function EducationSection() {
   const [isEditing, setEditing] = useState(false);
   const toggleEditing = () => setEditing(!isEditing);
 
-  const [schools, updateSchools] = useState([
-    {
-      institution: 'UNE',
-      entry: '2018',
-      ending: '2021',
-      acreditation: 'Ing. sistemas computacionales y electronicos',
-    },
-    {
-      institution: 'UNE',
-      entry: '2018',
-      ending: '2021',
-      acreditation: 'Ing. sistemas computacionales y electronicos',
-    },
-  ]);
+  const [schools, updateSchools] = useState([]);
 
   const addSchool = (entry) => {
     let newSchools = [...schools];

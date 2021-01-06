@@ -5,20 +5,7 @@ import { BsPencil, BsX } from 'react-icons/bs';
 
 export default function WorkSection() {
   const [isEditing, setEditing] = useState(false);
-  const [works, updateWorks] = useState([
-    {
-      company: 'Vallen Proveedora',
-      entry: '2020',
-      ending: '2035',
-      role: 'Programador principal',
-    },
-    {
-      company: 'Vallen Proveedora',
-      entry: '2020',
-      ending: '2035',
-      role: 'Programador principal',
-    },
-  ]);
+  const [works, updateWorks] = useState([]);
 
   const toggleEditing = () => {
     setEditing(!isEditing);
